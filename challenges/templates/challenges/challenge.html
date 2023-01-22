@@ -7,8 +7,12 @@
     <title>{{month_name|title}} Challenge</title>
 </head>
 <body>
-    <h1>{{month_name|title}} Challenges</h1>
-    <h2>{{text}}</h2>
+    <h1>{{ month_name|title }} Challenges</h1>
+    {% if text is not None %}
+        <h2>{{ text }}</h2>
+    {% else %}
+        <p> There is no challenge for this month yet !</p>
+    {% endif %}
 </body>
 </html>
 
